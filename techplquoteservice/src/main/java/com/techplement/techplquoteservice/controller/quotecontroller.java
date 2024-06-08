@@ -44,14 +44,14 @@ public class quotecontroller {
     }
 
     @DeleteMapping("/deleteQuotes")
-    public Boolean deleteQuotes(@RequestBody String id) {
+    public Boolean deleteQuotes(@RequestParam String id) {
         System.out.println("creating Student:" + id);
         quotesService.deleteQuote(id);
         return true;
     }
 
     @DeleteMapping("/deleteQuotesByQuoteId")
-    public Boolean deleteQuotesByQuoteId(@RequestBody int quoteid) {
+    public Boolean deleteQuotesByQuoteId(@RequestParam int quoteid) {
         System.out.println("creating Student:" + quoteid);
         quotesService.deleteQuoteByQuoteId(quoteid);
         return true;
